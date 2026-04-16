@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI-Powered Call Center Solution — AlMulla Exchange</title>
+<style>
+  @page { size: A4; margin: 18mm; }
+  @media print { body { -webkit-print-color-adjust: exact; print-color-adjust: exact; } .page-break { page-break-before: always; } }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; color: #2c3e50; line-height: 1.6; padding: 40px; max-width: 900px; margin: 0 auto; font-size: 13px; }
+
+  .cover { text-align: center; padding: 60px 20px 40px; page-break-after: always; }
+  .cover h1 { font-size: 30px; color: #1a5276; margin-bottom: 10px; }
+  .cover h2 { font-size: 18px; color: #2980b9; font-weight: 400; margin-bottom: 30px; }
+  .cover .logo-text { font-size: 44px; color: #1a5276; font-weight: 700; margin-bottom: 25px; letter-spacing: 2px; }
+  .cover .badge { display: inline-block; background: #1a5276; color: white; padding: 8px 24px; border-radius: 4px; font-size: 13px; margin-top: 15px; }
+  .cover .date { font-size: 13px; color: #7f8c8d; margin-top: 30px; }
+  .cover .confidential { color: #e74c3c; font-size: 11px; margin-top: 25px; text-transform: uppercase; letter-spacing: 1px; }
+
+  h2 { font-size: 20px; color: #1a5276; border-bottom: 3px solid #2980b9; padding-bottom: 6px; margin: 30px 0 15px; }
+  h3 { font-size: 15px; color: #2c3e50; margin: 18px 0 8px; }
+  h4 { font-size: 13px; color: #1a5276; margin: 14px 0 6px; }
+  p { margin-bottom: 10px; }
+
+  table { width: 100%; border-collapse: collapse; margin: 12px 0 20px; font-size: 12px; }
+  th { background: #1a5276; color: white; padding: 8px 10px; text-align: left; font-weight: 600; }
+  td { padding: 7px 10px; border-bottom: 1px solid #e0e0e0; }
+  tr:nth-child(even) { background: #f8f9fa; }
+
+  .highlight-box { background: #eaf2f8; border-left: 4px solid #2980b9; padding: 12px 16px; margin: 15px 0; border-radius: 0 4px 4px 0; }
+  .cost-highlight { background: #d5f5e3; border-left: 4px solid #27ae60; padding: 12px 16px; margin: 15px 0; border-radius: 0 4px 4px 0; }
+  .warning-box { background: #fef9e7; border-left: 4px solid #f39c12; padding: 12px 16px; margin: 15px 0; border-radius: 0 4px 4px 0; }
+  .red-box { background: #fdedec; border-left: 4px solid #e74c3c; padding: 12px 16px; margin: 15px 0; border-radius: 0 4px 4px 0; }
+
+  .flow-diagram { background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 8px; padding: 16px; margin: 15px 0; text-align: center; font-family: 'Courier New', monospace; font-size: 12px; line-height: 1.9; }
+  .flow-arrow { color: #2980b9; font-weight: bold; }
+
+  .two-col { display: flex; gap: 15px; margin: 12px 0; }
+  .two-col > div { flex: 1; background: #f8f9fa; padding: 12px; border-radius: 6px; border: 1px solid #e0e0e0; }
+  .two-col h4 { color: #1a5276; margin-bottom: 6px; }
+
+  .stat-grid { display: flex; gap: 12px; margin: 15px 0; flex-wrap: wrap; }
+  .stat-card { flex: 1; min-width: 130px; text-align: center; padding: 15px 10px; border-radius: 8px; border: 1px solid #e0e0e0; }
+  .stat-card .number { font-size: 28px; font-weight: 700; }
+  .stat-card .label { font-size: 11px; color: #7f8c8d; margin-top: 4px; }
+
+  ul { margin: 8px 0 12px 22px; }
+  li { margin-bottom: 4px; }
+
+  .footer { text-align: center; color: #95a5a6; font-size: 10px; margin-top: 30px; padding-top: 12px; border-top: 1px solid #e0e0e0; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 10px; font-weight: 600; }
+  .tag-green { background: #d5f5e3; color: #1e8449; }
+  .tag-red { background: #fdedec; color: #e74c3c; }
+  .tag-blue { background: #d6eaf8; color: #1a5276; }
+  .tag-orange { background: #fdebd0; color: #d35400; }
+
+  .vs-table td:first-child { font-weight: 600; width: 25%; }
+  .vs-us { background: #d5f5e3 !important; }
+  .vs-them { background: #fdedec !important; }
+</style>
+</head>
+<body>
+
+<!-- COVER PAGE -->
+<div class="cover">
+  <div class="logo-text">CentrixPlus</div>
+  <h1>AI-Powered Call Center Solution</h1>
+  <h2>Intelligent Voicebot, Live Agent Transfer,<br>Ticketing & Sentiment Analysis</h2>
+  <div style="margin: 30px 0;">
+    <span style="font-size: 22px; color: #1a5276; font-weight: 600;">Al Mulla Exchange</span>
+  </div>
+  <div class="badge">Technical & Commercial Proposal</div>
+  <div class="date">April 2026</div>
+  <div style="margin-top: 50px; color: #7f8c8d; font-size: 12px;">
+    Prepared by: CentrixPlus Technology<br>
+    Contact: burhan@centrixplus.com
+  </div>
+  <div class="confidential">Confidential</div>
+</div>
+
+<!-- EXECUTIVE SUMMARY -->
+<h2>1. Executive Summary</h2>
+
+<p>CentrixPlus proposes an AI-powered enhancement to Al Mulla Exchange's call center — designed to ensure <strong>every customer call is answered</strong>, whether by an intelligent AI voicebot or a live agent, 24 hours a day, 7 days a week.</p>
+
+<p>The solution is fully integrated with the existing Centrix Dial, Centrix PBX, and CRM infrastructure. Unlike cloud-only platforms that require data to leave Kuwait, our approach keeps <strong>all data on-premise</strong>, delivers tighter integration, and costs significantly less than third-party alternatives.</p>
+
+<div class="two-col">
+  <div>
+    <h4>AI Voicebot</h4>
+    <p>Answers inbound calls instantly — handles rate inquiries, transaction status, FAQ, and complaints. Supports Arabic and English. Provides 24/7 coverage including after-hours.</p>
+  </div>
+  <div>
+    <h4>Live Agent Transfer</h4>
+    <p>When the AI cannot resolve, the call transfers seamlessly to a live agent. The agent sees the full AI conversation, customer details, and sentiment — no need for the customer to repeat.</p>
+  </div>
+</div>
+<div class="two-col">
+  <div>
+    <h4>Ticketing & Escalation</h4>
+    <p>If an agent cannot resolve on the call, a ticket is auto-created with AI summary, assigned to the right team, and tracked with SLA monitoring. Customer gets SMS confirmation.</p>
+  </div>
+  <div>
+    <h4>Sentiment Analysis</h4>
+    <p>Every agent call is analyzed automatically — sentiment, resolution status, compliance, and agent performance. Management dashboard with real-time alerts for critical calls.</p>
+  </div>
+</div>
+
+<h3>Key Highlights</h3>
+<table>
+  <tr><th>Feature</th><th>Details</th></tr>
+  <tr><td>AI Concurrent Capacity</td><td>Up to <strong>30-40 AI agents</strong> handling calls simultaneously across 60 channels</td></tr>
+  <tr><td>Languages</td><td>Arabic and English (additional languages available on request)</td></tr>
+  <tr><td>Coverage</td><td>24/7 — AI bot answers during and after working hours</td></tr>
+  <tr><td>Sentiment Analysis</td><td>100% of agent calls analyzed, near real-time (every 5 minutes)</td></tr>
+  <tr><td>Data Location</td><td>100% on-premise in Kuwait — no data leaves the country</td></tr>
+  <tr><td>Integration</td><td>Native — already integrated with existing PBX and CRM</td></tr>
+  <tr><td>Setup Fee</td><td>Zero — no upfront costs</td></tr>
+</table>
+
+<div class="cost-highlight">
+  <strong>All-inclusive: 900 KD/month</strong> (800 KD/month with 12-month commitment) — covers everything including AI services, development, maintenance, dashboard, and support. No per-agent fees. No per-minute charges. No hidden costs.
+</div>
+
+<!-- HOW IT WORKS -->
+<h2 class="page-break">2. AI Voicebot — How It Works</h2>
+
+<h3>2.1 Inbound Call Flow</h3>
+<div class="flow-diagram">
+  Customer calls Al Mulla Exchange (PSTN)<br>
+  <span class="flow-arrow">&#9660;</span><br>
+  Sangoma Vega SBC &rarr; Centrix PBX<br>
+  <span class="flow-arrow">&#9660;</span><br>
+  IVR: Language Selection (English / Arabic)<br>
+  <span class="flow-arrow">&#9660;</span><br>
+  <strong>AI Voicebot Answers Instantly</strong> — No Wait, No Queue<br>
+  <span class="flow-arrow">&#9660;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9660;</span><br>
+  <span style="color:#27ae60; font-weight:bold;">Resolved &#10003;</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#e67e22; font-weight:bold;">Needs Agent &#8594; Live Transfer</span><br>
+  <span class="flow-arrow">&#9660;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9660;</span><br>
+  Summary Logged &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Agent Gets Full AI Context<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="flow-arrow">&#9660;</span><br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#e74c3c; font-weight:bold;">Still Unresolved? &#8594; Auto Ticket Created</span>
+</div>
+
+<h3>2.2 What the AI Voicebot Handles</h3>
+<table>
+  <tr><th>Customer Query</th><th>AI Bot Action</th><th>Example</th></tr>
+  <tr><td>Exchange Rate</td><td>Fetches live rates, speaks to caller</td><td>"What is the rate for Indian Rupee?"</td></tr>
+  <tr><td>Transaction Status</td><td>Looks up transfer by reference #</td><td>"My transfer ref 12345, where is it?"</td></tr>
+  <tr><td>Open Complaint</td><td>Creates ticket, assigns to team</td><td>"I want to complain about a delay"</td></tr>
+  <tr><td>Branch Info</td><td>Provides hours, locations, services</td><td>"When does Hawally branch close?"</td></tr>
+  <tr><td>General FAQ</td><td>Answers from knowledge base</td><td>"What documents to send money?"</td></tr>
+  <tr><td>Complex / Escalation</td><td>Transfers to live agent with full context</td><td>"I need to speak to someone"</td></tr>
+</table>
+
+<h3>2.3 How Calls Are Divided Between AI and Human Agents</h3>
+
+<p>The system intelligently routes each call to the right handler — AI bot or human agent — based on the nature of the inquiry:</p>
+
+<table>
+  <tr><th>Call Type</th><th>Handled By</th><th>Expected %</th><th>What Happens</th></tr>
+  <tr><td>Rate inquiries</td><td><span class="tag tag-blue">AI Bot</span></td><td>~25%</td><td>Bot fetches live rates from the system and responds instantly</td></tr>
+  <tr><td>Transaction status</td><td><span class="tag tag-blue">AI Bot</span></td><td>~20%</td><td>Bot looks up reference number and provides status</td></tr>
+  <tr><td>General FAQ / Branch info</td><td><span class="tag tag-blue">AI Bot</span></td><td>~10%</td><td>Bot answers from knowledge base</td></tr>
+  <tr><td>After-hours calls</td><td><span class="tag tag-blue">AI Bot</span></td><td>~10%</td><td>Bot handles fully — logs tickets for next business day if needed</td></tr>
+  <tr><td>Complaints / Issues</td><td><span class="tag tag-orange">AI Bot &rarr; Agent</span></td><td>~15%</td><td>Bot captures details, creates ticket, transfers to agent with context</td></tr>
+  <tr><td>Complex / VIP / Returning</td><td><span class="tag tag-green">Human Agent</span></td><td>~20%</td><td>Call goes directly to agent queue</td></tr>
+</table>
+
+<div class="highlight-box">
+  <strong>How it works in practice:</strong> Every call is first answered by the AI bot. If the bot detects the customer needs a human agent — either because they request one, or the issue is complex — the call is transferred instantly. The human agent receives a screen pop showing the full AI conversation, so the customer never has to repeat themselves.
+</div>
+
+<!-- LIVE AGENT + TICKETING -->
+<h2 class="page-break">3. Live Agent Transfer & Ticketing</h2>
+
+<h3>3.1 Seamless Agent Handoff</h3>
+<p>When the AI bot transfers to a live agent, the agent's CRM screen automatically displays:</p>
+<ul>
+  <li><strong>AI Conversation Summary</strong> — what the customer asked, what the bot answered</li>
+  <li><strong>Customer Details</strong> — phone number, name, previous interactions</li>
+  <li><strong>Sentiment Indicator</strong> — whether the customer is calm, frustrated, or angry</li>
+  <li><strong>Recommended Action</strong> — what the bot suggests the agent should do</li>
+  <li><strong>Language</strong> — Arabic or English, so the right agent is assigned</li>
+</ul>
+
+<h3>3.2 Automatic Ticket Creation</h3>
+<p>If the agent cannot resolve the issue on the call:</p>
+<table>
+  <tr><th>Ticket Field</th><th>Auto-Populated By</th></tr>
+  <tr><td>Customer Phone / Name</td><td>Caller ID + CRM lookup</td></tr>
+  <tr><td>Issue Description</td><td>AI conversation summary</td></tr>
+  <tr><td>Priority</td><td>Sentiment analysis (angry = high, neutral = normal)</td></tr>
+  <tr><td>Assigned Team</td><td>Issue type routing (rates &rarr; operations, complaint &rarr; CS)</td></tr>
+  <tr><td>Call Recording</td><td>Attached automatically</td></tr>
+  <tr><td>SLA Timer</td><td>Starts on ticket creation</td></tr>
+</table>
+<p>Supervisors see open tickets on their dashboard. Customer receives SMS confirmation with ticket reference number. Tickets are tracked to resolution.</p>
+
+<!-- SENTIMENT -->
+<h2>4. Sentiment Analysis & Quality Monitoring</h2>
+
+<h3>4.1 Automated Call Analysis</h3>
+<p>Every call between a customer and a live agent is automatically analyzed within minutes:</p>
+
+<table>
+  <tr><th>Data Extracted</th><th>Description</th><th>Example</th></tr>
+  <tr><td><span class="tag tag-blue">Sentiment</span></td><td>Customer emotional tone</td><td>Angry, Frustrated, Neutral, Happy</td></tr>
+  <tr><td><span class="tag tag-green">Resolution</span></td><td>Was the issue resolved?</td><td>Resolved / Not Resolved / Follow-up</td></tr>
+  <tr><td><span class="tag tag-orange">Topic</span></td><td>Main subject of call</td><td>Rate inquiry, Complaint, Transfer status</td></tr>
+  <tr><td><span class="tag tag-blue">Agent Score</span></td><td>Agent performance</td><td>Professional, Empathetic, Needs training</td></tr>
+  <tr><td><span class="tag tag-green">Compliance</span></td><td>Did agent follow script?</td><td>Greeting: Yes, ID verification: No</td></tr>
+  <tr><td><span class="tag tag-orange">Summary</span></td><td>AI call summary</td><td>"Customer upset about delayed INR transfer #12345"</td></tr>
+</table>
+
+<h3>4.2 Management Dashboard</h3>
+<ul>
+  <li><strong>Daily sentiment breakdown</strong> — percentage of positive, neutral, negative calls</li>
+  <li><strong>Resolution rate</strong> — first-call resolution vs. escalation</li>
+  <li><strong>Agent performance scores</strong> — ranked by quality across all agents</li>
+  <li><strong>Top complaint topics</strong> — what customers complain about most</li>
+  <li><strong>Trend analysis</strong> — sentiment trends over days, weeks, months</li>
+  <li><strong>Real-time alerts</strong> — supervisor notified immediately for angry calls</li>
+  <li><strong>Call transcript viewer</strong> — full conversation with speaker labels (Arabic + English)</li>
+</ul>
+
+<div class="highlight-box">
+  <strong>Near real-time:</strong> Calls are analyzed every 5 minutes. Unlike batch solutions that process once per day, insights are available within minutes. Angry customer alerts trigger immediately.
+</div>
+
+<!-- CAPACITY & BANDWIDTH -->
+<h2 class="page-break">5. Capacity, Concurrency & Bandwidth</h2>
+
+<h3>5.1 AI Agent Concurrency</h3>
+
+<p>The AI voicebot operates as multiple concurrent virtual agents, each capable of handling a separate customer call simultaneously:</p>
+
+<div class="stat-grid">
+  <div class="stat-card" style="background: #eaf2f8;">
+    <div class="number" style="color: #1a5276;">60</div>
+    <div class="label">PSTN Channels<br>(Existing Capacity)</div>
+  </div>
+  <div class="stat-card" style="background: #d6eaf8;">
+    <div class="number" style="color: #2980b9;">30-40</div>
+    <div class="label">Concurrent AI<br>Agents</div>
+  </div>
+  <div class="stat-card" style="background: #d5f5e3;">
+    <div class="number" style="color: #27ae60;">2-3 min</div>
+    <div class="label">Average AI<br>Call Duration</div>
+  </div>
+  <div class="stat-card" style="background: #fdebd0;">
+    <div class="number" style="color: #d35400;">24/7</div>
+    <div class="label">Availability<br>Including After-Hours</div>
+  </div>
+</div>
+
+<table>
+  <tr><th>Component</th><th>Capacity</th><th>Technology</th></tr>
+  <tr><td>PSTN Channels</td><td>60 concurrent calls</td><td>Sangoma Vega SBC (existing)</td></tr>
+  <tr><td>Centrix PBX</td><td>60+ concurrent calls</td><td>Centrix REST Interface</td></tr>
+  <tr><td>AI Bot Virtual Agents</td><td>30-40 concurrent conversations</td><td>Python FastAPI + async streaming</td></tr>
+  <tr><td>Speech-to-Text</td><td>Unlimited concurrent</td><td>Cloud API (auto-scales with demand)</td></tr>
+  <tr><td>AI Processing (LLM)</td><td>Unlimited concurrent</td><td>Cloud API (auto-scales with demand)</td></tr>
+  <tr><td>Text-to-Speech</td><td>Unlimited concurrent</td><td>Cloud API (auto-scales with demand)</td></tr>
+</table>
+
+<p>With 30-40 concurrent AI agents and an average call duration of 2-3 minutes, the system can handle over <strong>800 AI-served calls per hour</strong> during peak times.</p>
+
+<h3>5.2 Internet Bandwidth Requirements</h3>
+
+<p>The AI voicebot requires internet bandwidth for streaming audio to and from cloud AI services. Below are the requirements:</p>
+
+<table>
+  <tr><th>Component</th><th>Per Concurrent Call</th><th>40 Concurrent Calls</th></tr>
+  <tr><td>Voice audio (upstream to STT)</td><td>64 Kbps</td><td>2.5 Mbps</td></tr>
+  <tr><td>Voice audio (downstream from TTS)</td><td>64 Kbps</td><td>2.5 Mbps</td></tr>
+  <tr><td>API calls (LLM + data lookup)</td><td>~20 Kbps</td><td>0.8 Mbps</td></tr>
+  <tr><td>Overhead / protocol</td><td>~30 Kbps</td><td>1.2 Mbps</td></tr>
+  <tr style="font-weight:bold; background:#eaf2f8;"><td>Total Required</td><td>~178 Kbps per call</td><td>~7 Mbps</td></tr>
+</table>
+
+<div class="highlight-box">
+  <strong>Bandwidth needed: approximately 7-10 Mbps</strong> for 40 concurrent AI calls at peak. This is well within standard business internet capacity. The existing internet connection at Al Mulla Exchange is sufficient — no upgrade required. Sentiment analysis runs on the local network and does not consume internet bandwidth.
+</div>
+
+<h3>5.3 Call Distribution at Peak (50 Concurrent Calls)</h3>
+
+<p>During peak hours when all 60 channels may be active:</p>
+
+<table>
+  <tr><th>Handler</th><th>Concurrent Calls</th><th>What They Handle</th></tr>
+  <tr><td><span class="tag tag-blue">AI Bot Agents</span></td><td>30-35 calls</td><td>Rate inquiries, transaction status, FAQ, complaints intake, after-hours</td></tr>
+  <tr><td><span class="tag tag-green">Human Agents</span></td><td>15-20 calls</td><td>Complex issues, VIP customers, transfers from AI, cases needing personal attention</td></tr>
+  <tr style="font-weight:bold; background:#eaf2f8;"><td>Total</td><td>50 concurrent</td><td>Every call answered — zero customers waiting in queue</td></tr>
+</table>
+
+<!-- ARCHITECTURE -->
+<h2 class="page-break">6. Technical Architecture</h2>
+
+<h3>6.1 Infrastructure Overview</h3>
+<table>
+  <tr><th>Component</th><th>Technology</th><th>Location</th></tr>
+  <tr><td>Call Platform</td><td>Centrix Dial + Centrix PBX (existing)</td><td>On-premise, Kuwait</td></tr>
+  <tr><td>PSTN Gateway</td><td>Sangoma Vega 400G (existing)</td><td>On-premise, Kuwait</td></tr>
+  <tr><td>AI Bot Service</td><td>Python FastAPI + Centrix ARI</td><td>On-premise, Kuwait</td></tr>
+  <tr><td>CRM & Ticketing</td><td>Laravel CRM (existing, enhanced)</td><td>On-premise, Kuwait</td></tr>
+  <tr><td>Sentiment Engine</td><td>Automated analysis pipeline</td><td>On-premise, Kuwait</td></tr>
+  <tr><td>Dashboard</td><td>Web application (Laravel)</td><td>On-premise, Kuwait</td></tr>
+  <tr><td>Speech-to-Text</td><td>Streaming STT (Arabic + English)</td><td>Cloud API (encrypted)</td></tr>
+  <tr><td>AI Brain (LLM)</td><td>GPT-4o / Claude</td><td>Cloud API (encrypted)</td></tr>
+  <tr><td>Text-to-Speech</td><td>Neural TTS (Arabic + English)</td><td>Cloud API (encrypted)</td></tr>
+  <tr><td>Call Recordings</td><td>MP3 (existing system)</td><td>On-premise, Kuwait</td></tr>
+</table>
+
+<h3>6.2 Data Privacy & Security</h3>
+<ul>
+  <li><strong>All call recordings remain on-premise in Kuwait</strong> — never uploaded to external storage</li>
+  <li>Only live audio streams are sent to cloud AI services during active bot calls — encrypted (TLS 1.3)</li>
+  <li>Cloud AI providers <strong>do not store or train on API data</strong></li>
+  <li>All analysis results stored locally in the on-premise database</li>
+  <li>Access secured via Cloudflare Tunnel + role-based authentication</li>
+  <li>No customer data leaves Kuwait permanently</li>
+</ul>
+
+<h3>6.3 Language Support</h3>
+<div class="highlight-box">
+  Full support for <strong>Arabic and English</strong>. The AI voicebot uses Google and Azure speech services with proven Gulf Arabic accuracy for both speech recognition and voice synthesis. Arabic Neural TTS provides natural-sounding Arabic responses. Additional languages (Hindi, Urdu, Tagalog) can be added based on customer demographics.
+</div>
+
+<!-- COMPARISON -->
+<h2 class="page-break">7. Why CentrixPlus — Competitive Comparison</h2>
+
+<table class="vs-table">
+  <tr><th style="width:25%">Factor</th><th style="width:37%">Third-Party Cloud Platform</th><th style="width:38%">CentrixPlus (Our Solution)</th></tr>
+  <tr>
+    <td>Data Location</td>
+    <td class="vs-them">UAE / India cloud — data leaves Kuwait</td>
+    <td class="vs-us">100% on-premise in Kuwait</td>
+  </tr>
+  <tr>
+    <td>CRM Integration</td>
+    <td class="vs-them">Requires API development from scratch</td>
+    <td class="vs-us">Already integrated — we built the CRM</td>
+  </tr>
+  <tr>
+    <td>Agent Transfer</td>
+    <td class="vs-them">SIP to external cloud, back to CC — added latency</td>
+    <td class="vs-us">Direct PBX transfer — zero latency</td>
+  </tr>
+  <tr>
+    <td>Recording Access</td>
+    <td class="vs-them">Must upload to AWS S3 / Azure via SFTP</td>
+    <td class="vs-us">Direct access — recordings on our server</td>
+  </tr>
+  <tr>
+    <td>Sentiment Speed</td>
+    <td class="vs-them">Batch processing — once per day</td>
+    <td class="vs-us">Near real-time — every 5 minutes</td>
+  </tr>
+  <tr>
+    <td>Ticketing</td>
+    <td class="vs-them">Separate tool required</td>
+    <td class="vs-us">Built into existing CRM</td>
+  </tr>
+  <tr>
+    <td>Arabic Support</td>
+    <td class="vs-them">Unproven in GCC market</td>
+    <td class="vs-us">Google/Azure — proven Gulf Arabic</td>
+  </tr>
+  <tr>
+    <td>System Knowledge</td>
+    <td class="vs-them">Starts from zero — needs discovery phase</td>
+    <td class="vs-us">We built and manage the entire platform</td>
+  </tr>
+  <tr>
+    <td>Vendor Lock-in</td>
+    <td class="vs-them">Yes — proprietary platform</td>
+    <td class="vs-us">No lock-in — open APIs, you own the solution</td>
+  </tr>
+  <tr>
+    <td>SIP / Telco Integration</td>
+    <td class="vs-them">Client must handle SIP integration</td>
+    <td class="vs-us">Already done — we manage the PBX</td>
+  </tr>
+  <tr>
+    <td>Monthly Cost</td>
+    <td class="vs-them">Estimated 2,000 – 4,000+ KD/month</td>
+    <td class="vs-us"><strong>900 KD/month (800 KD annual)</strong></td>
+  </tr>
+</table>
+
+<div class="red-box">
+  <strong>Data sovereignty:</strong> Cloud platforms require call recordings and customer data to be uploaded to servers outside Kuwait. Our solution keeps all data on-premise — only live audio streams are processed via encrypted APIs during bot calls, with zero data retention by AI providers.
+</div>
+
+<!-- PRICING -->
+<h2 class="page-break">8. Commercial Proposal</h2>
+
+<h3>8.1 Monthly Service Breakdown</h3>
+
+<table>
+  <tr><th>Service Component</th><th>What's Included</th><th>Monthly</th></tr>
+  <tr>
+    <td><strong>AI Voicebot Platform</strong></td>
+    <td>30-40 concurrent AI agents, Arabic + English, speech recognition, natural voice responses, 24/7 operation, rate lookup, transaction status, FAQ</td>
+    <td style="text-align:right; font-weight:bold;">400 KD</td>
+  </tr>
+  <tr>
+    <td><strong>Sentiment Analysis & Quality Monitoring</strong></td>
+    <td>100% of agent calls analyzed, transcription, sentiment scoring, compliance checking, agent performance evaluation</td>
+    <td style="text-align:right; font-weight:bold;">200 KD</td>
+  </tr>
+  <tr>
+    <td><strong>Management Dashboard & Reporting</strong></td>
+    <td>Real-time dashboard, trend analysis, agent rankings, export capabilities, supervisor alerts for critical calls</td>
+    <td style="text-align:right; font-weight:bold;">100 KD</td>
+  </tr>
+  <tr>
+    <td><strong>Live Transfer, Ticketing & CRM Integration</strong></td>
+    <td>Agent screen pop with AI context, auto-ticket creation, team assignment, SLA tracking, SMS notifications</td>
+    <td style="text-align:right; font-weight:bold;">100 KD</td>
+  </tr>
+  <tr>
+    <td><strong>Maintenance, Support & Optimization</strong></td>
+    <td>Ongoing monitoring, knowledge base updates, Arabic tuning, performance optimization, technical support</td>
+    <td style="text-align:right; font-weight:bold;">100 KD</td>
+  </tr>
+  <tr style="background: #1a5276; color: white; font-weight: bold; font-size: 14px;">
+    <td colspan="2" style="border-bottom: none;">Total Monthly Fee</td>
+    <td style="text-align:right; border-bottom: none;">900 KD</td>
+  </tr>
+</table>
+
+<div style="text-align: center; margin: 20px 0; padding: 20px; background: linear-gradient(135deg, #1a5276, #2980b9); border-radius: 8px; color: white;">
+  <div style="font-size: 13px; margin-bottom: 8px;">Monthly Fee</div>
+  <div style="font-size: 36px; font-weight: 700;">900 KD / month</div>
+  <div style="font-size: 16px; margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.3);">
+    12-month commitment: <strong>800 KD / month</strong>
+  </div>
+  <div style="font-size: 11px; margin-top: 8px; color: #aed6f1;">No setup fees &bull; No per-agent licensing &bull; No per-minute charges &bull; No hidden costs</div>
+</div>
+
+<h3>8.2 What's NOT Charged Extra</h3>
+<table>
+  <tr><th>Item</th><th>Status</th></tr>
+  <tr><td>Setup / Development / Onboarding</td><td><span class="tag tag-green">Included — zero upfront</span></td></tr>
+  <tr><td>CRM & PBX Integration</td><td><span class="tag tag-green">Already integrated</span></td></tr>
+  <tr><td>Dashboard Development</td><td><span class="tag tag-green">Included</span></td></tr>
+  <tr><td>Per-Agent License</td><td><span class="tag tag-green">Not applicable</span></td></tr>
+  <tr><td>Per-Minute Call Charges</td><td><span class="tag tag-green">Included in monthly fee</span></td></tr>
+  <tr><td>Recording Upload / SFTP Setup</td><td><span class="tag tag-green">Not needed</span></td></tr>
+  <tr><td>SIP / Telco Integration</td><td><span class="tag tag-green">Already done</span></td></tr>
+  <tr><td>Knowledge Base / Script Updates</td><td><span class="tag tag-green">Included in maintenance</span></td></tr>
+</table>
+
+<h3>8.3 Annual Cost Comparison</h3>
+<table>
+  <tr><th>Cost Element</th><th>Third-Party Platform (Est.)</th><th>CentrixPlus</th></tr>
+  <tr><td>Monthly Platform Fee</td><td>500 – 1,500 KD</td><td rowspan="5" style="vertical-align: middle; text-align: center; font-size: 18px; font-weight: bold; background: #d5f5e3; color: #1e8449;">800 KD<br><span style="font-size: 11px; font-weight: normal;">all-inclusive<br>(annual commitment)</span></td></tr>
+  <tr><td>Per-Minute AI Charges</td><td>200 – 500 KD</td></tr>
+  <tr><td>Setup / Onboarding</td><td>1,500 – 5,000 KD (one-time)</td></tr>
+  <tr><td>CRM Integration</td><td>500 – 1,500 KD (one-time)</td></tr>
+  <tr><td>Ongoing Support</td><td>200 – 500 KD</td></tr>
+  <tr style="font-weight: bold; background: #eaf2f8;">
+    <td>Year 1 Total</td>
+    <td style="color: #e74c3c;">20,000 – 53,000 KD</td>
+    <td style="color: #27ae60; text-align: center;">9,600 KD</td>
+  </tr>
+  <tr style="font-weight: bold; background: #eaf2f8;">
+    <td>Year 2 Total</td>
+    <td style="color: #e74c3c;">18,000 – 48,000 KD</td>
+    <td style="color: #27ae60; text-align: center;">9,600 KD</td>
+  </tr>
+</table>
+
+<!-- TIMELINE -->
+<h2 class="page-break">9. Implementation Timeline</h2>
+
+<table>
+  <tr><th>Phase</th><th>Duration</th><th>Deliverables</th></tr>
+  <tr><td><strong>Phase 1</strong> — Discovery & Design</td><td>Week 1-2</td><td>Requirements, API access, voicebot scripts (Arabic + English), system design</td></tr>
+  <tr><td><strong>Phase 2</strong> — Sentiment Analysis</td><td>Week 3-4</td><td>Post-call analysis pipeline, dashboard, alerts — <strong>goes live</strong></td></tr>
+  <tr><td><strong>Phase 3</strong> — AI Voicebot (English)</td><td>Week 5-7</td><td>Voice bot, rate lookup, transaction status, FAQ, live agent transfer</td></tr>
+  <tr><td><strong>Phase 4</strong> — Arabic + Ticketing</td><td>Week 8-9</td><td>Arabic support, ticket creation, assignment rules, SMS notifications</td></tr>
+  <tr><td><strong>Phase 5</strong> — Dashboard & Reports</td><td>Week 10</td><td>Full management dashboard, KPI reports, trends, exports</td></tr>
+  <tr><td><strong>Phase 6</strong> — UAT & Go-Live</td><td>Week 11-12</td><td>Testing with live calls, pilot, monitoring, full go-live</td></tr>
+</table>
+
+<div class="highlight-box">
+  <strong>Quick win:</strong> Sentiment Analysis goes live by Week 4 — providing immediate visibility into customer interactions while the voicebot is being developed.
+</div>
+
+<!-- PREREQUISITES -->
+<h2>10. Prerequisites from Al Mulla Exchange</h2>
+
+<table>
+  <tr><th>#</th><th>Requirement</th><th>Purpose</th></tr>
+  <tr><td>1</td><td>Exchange rate data source (API or database access)</td><td>AI bot to provide live rates</td></tr>
+  <tr><td>2</td><td>Transaction lookup system (API or DB)</td><td>AI bot to check transfer status</td></tr>
+  <tr><td>3</td><td>Voicebot scripts approval (English + Arabic)</td><td>Call flow and greeting scripts</td></tr>
+  <tr><td>4</td><td>Ticket assignment rules</td><td>Which team handles which issue</td></tr>
+  <tr><td>5</td><td>Test phone number</td><td>Development and testing</td></tr>
+  <tr><td>6</td><td>KPI definitions for quality analysis</td><td>Metrics for sentiment dashboard</td></tr>
+</table>
+
+<div class="warning-box">
+  <strong>Note:</strong> Items 1 and 2 are critical for voicebot functionality. If APIs are not readily available, CentrixPlus can develop API wrappers as part of the implementation at no additional cost.
+</div>
+
+<!-- NEXT STEPS -->
+<h2>11. Next Steps</h2>
+
+<table>
+  <tr><th>#</th><th>Action</th><th>Responsibility</th></tr>
+  <tr><td>1</td><td>Review and approve this proposal</td><td>Al Mulla Exchange</td></tr>
+  <tr><td>2</td><td>Confirm scope — voicebot flows, languages, KPIs</td><td>Joint</td></tr>
+  <tr><td>3</td><td>Provide API access / data source for rates & transactions</td><td>Al Mulla Exchange</td></tr>
+  <tr><td>4</td><td>Approve voicebot scripts (English + Arabic)</td><td>Al Mulla Exchange</td></tr>
+  <tr><td>5</td><td>Project kick-off and Phase 1 start</td><td>CentrixPlus</td></tr>
+</table>
+
+<div class="footer">
+  <p>CentrixPlus Technology &bull; AI-Powered Call Center Solution for Al Mulla Exchange &bull; April 2026</p>
+  <p>This document is confidential and intended solely for the recipient.</p>
+</div>
+
+</body>
+</html>
